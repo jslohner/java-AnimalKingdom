@@ -1,12 +1,15 @@
 package animalkingdomjava;
 
 abstract class AbstractAnimal {
+	private static int maxId = 0;
+
 	protected int animalId;
 	protected String animalName;
 	protected int animalYear;
 
-	public AbstractAnimal(int animalId, String animalName, int animalYear) {
-		this.animalId = animalId;
+	public AbstractAnimal(String animalName, int animalYear) {
+		animalId = maxId;
+		maxId++;
 		this.animalName = animalName;
 		this.animalYear = animalYear;
 	}

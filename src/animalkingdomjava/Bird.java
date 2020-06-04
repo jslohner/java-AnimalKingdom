@@ -5,8 +5,8 @@ public class Bird extends AbstractAnimal {
 	private String breathType;
 	private String repType;
 
-	public Bird(int animalId, String animalName, int animalYear) {
-		super(animalId, animalName, animalYear);
+	public Bird(String animalName, int animalYear) {
+		super(animalName, animalYear);
 		moveType = "fly";
 		breathType = "lungs";
 		repType = "eggs";
@@ -25,6 +25,11 @@ public class Bird extends AbstractAnimal {
 	@Override
 	public String getRepType() {
 		return repType;
+	}
+
+	@Override
+	public String toString() {
+		return animalName + " " + repType + " " + moveType + " " + breathType + " " + animalYear;
 	}
 }
 

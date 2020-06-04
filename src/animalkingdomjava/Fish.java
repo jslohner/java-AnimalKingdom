@@ -5,8 +5,8 @@ public class Fish extends AbstractAnimal {
 	private String breathType;
 	private String repType;
 
-	public Fish(int animalId, String animalName, int animalYear) {
-		super(animalId, animalName, animalYear);
+	public Fish(String animalName, int animalYear) {
+		super(animalName, animalYear);
 		moveType = "swim";
 		breathType = "gills";
 		repType = "eggs";
@@ -26,6 +26,13 @@ public class Fish extends AbstractAnimal {
 	public String getRepType() {
 		return repType;
 	}
+
+	@Override
+	public String toString() {
+		return animalName + " " + repType + " " + moveType + " " + breathType + " " + animalYear;
+	}
 }
+
+// Parrot eggs fly lungs 1824
 
 // * [ ] Fish move - swim, breath - gills, reproduce - eggs
